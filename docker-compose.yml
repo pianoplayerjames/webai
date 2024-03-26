@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    environment:
+      username: rootuser
+      password: rootpass
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+      - ./db:/docker-entrypoint-initdb.d
+volumes:
+  mongo_data:
+  mongo_config:
