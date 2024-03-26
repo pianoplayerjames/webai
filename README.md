@@ -8,7 +8,7 @@
 
 ```
 git clone https://github.com/pianoplayerjames/webai.git
-cd mevn
+cd webai
 npm install
 docker-compose up --build -d
 npm start
